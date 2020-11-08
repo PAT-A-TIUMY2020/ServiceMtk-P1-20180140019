@@ -13,16 +13,20 @@ namespace ServiceMtk_P1_20180140019
     public interface IMatematika
     {
         [OperationContract]
-        /* output->*/
-        int Tambah(int a, int b); //method
+        [FaultContract(typeof(MathFault))]
+        int Tambah(int a, int b);
+
         [OperationContract]
-        int Kurang(int a, int b); //input
+        int Kurang(int a, int b);
+
         [OperationContract]
         int Kali(int a, int b);
+
         [OperationContract]
         int Bagi(int a, int b);
+
         [OperationContract]
-        Koordinat TKoordinat(Koordinat a, Koordinat b); //object dari class
+        Koordinat TKoordinat(Koordinat a, Koordinat b);
 
     }
 
