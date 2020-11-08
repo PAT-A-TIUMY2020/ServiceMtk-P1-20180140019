@@ -27,6 +27,14 @@ namespace ServiceMtk_P1_20180140019
     }
 
     [DataContract]
+    class MathFault
+    {
+        [DataMember]
+        public string Kode { get; set; }
+        [DataMember]
+        public string Pesan { get; set; }
+    }
+
     public class Koordinat
     {
         private int _x, _y; //atribut
